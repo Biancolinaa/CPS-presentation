@@ -1,0 +1,126 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\graphicspath{{./images/}}
+
+\usetheme{Madrid}
+\setlength{\parskip}{0.5em}
+\beamertemplatenavigationsymbolsempty
+
+
+\title{Cyber Physical Systems}
+\subtitle{Panoramica sulla sicurezza}
+\author{Bianca Crippa}
+\date{2021}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\AtBeginSection[]{
+    \begin{frame}
+      \frametitle{Argomenti}
+      \tableofcontents[currentsection]
+    \end{frame}
+  }
+
+\section{Introduzione}
+
+\begin{frame}
+    \frametitle{Cyber Physical Systems}
+    I Cyber Physical Systems (CPS) sono una delle innovazioni tecncologiche della quarta rivoluzione industriale.
+    
+    Sono sistemi il cui meccanismo è monitorato da algoritmi computer-based. 
+    Le componenti fisiche e software sono fortemente interconnesse in modo tale da poter operare su diverse scale temporali e spaziali e poter interagire tra loro in modi differenti in base ai cambiamenti del contesto. L'insieme di queste tecnologie è in grado di dar vita ad un ulteriore sistema basato sull'integrazione tra vari soggetti, posti anche a distanza tra loro.
+    
+    In essi si fondono conoscenze riguardanti la meccatronica, la cibernetica, il design e la scienza dei processi.
+    
+\end{frame}
+
+\begin{frame}
+\frametitle{Livelli di funzionalità}
+
+    Cinque livelli di funzionalità:
+    \begin{itemize}
+        \item Smart Connection: utilizzo di sensori per la gestione dei dati;
+        \item Data-to-information-connection: aggregazione e conversione dei dati con aggiunta di eventuali informazioni;
+        \item Digital Twin: sintetizzazione del dominio reale nella realtà digitale;
+        \item Cogniction: considerazione di tutti gli scenari possibili. Indispensabile per un processo decisionale adeguato;
+        \item Configuration: proiettare la realtà virtuale su quella fisica tramite l'invio di feedback.
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Tecnologie}
+Tre tipologie di tecnologie abilitanti:
+\begin{itemize}
+    \item Sensori integrati: ciascun sistema in pochi secondi riesce a capire la propria situazione operativa e inviare le informazioni relative al proprio stato e alla posizione;
+    \item Attuatori: consentono lo svolgimento delle varie azioni senza rischi per rendere ogni processo più performante;
+    \item Intelligenza decentrata: elabora gli scenari di scelta per fornire il più rapidamente possibile quello più consigliato.
+\end{itemize}
+
+L'insieme delle tecnologie costituisce il dominio digitale che permette alle informazioni di muoversi e garantisce una connessione veloce tra i componenti fisici.
+
+\end{frame}
+
+\begin{frame}{Vantaggi}
+L'utilizzo dei Cyber Physical Systems può portare a:
+\begin{itemize}
+    \item Nuove possibilità di business;
+    \item Digitalizzazione del prodotto;
+    \item Migliore gestione della produzione e delle performance;
+    \item Gestione di impianti, macchinari e attrezzature più semplice;
+    \item Trasferimento di informazioni e conoscenze più veloce.
+\end{itemize}
+    
+\end{frame}
+
+\section{Attacchi}
+
+\begin{frame}{Attacchi}
+Gli attacchi ai Cyber Physical Systems sono di tre tipi:
+\begin{itemize}
+    \item \textbf{Attacchi all'availability del sistema}; 
+    \item \textbf{Attacchi all'integrità dei dati}: noti anche come \textit{deception attacks}, rappresentano la classe più ampia di attacchi;
+    \item \textbf{Attacchi alla riservatezza}: noti anche come \textit{disclosure attacks}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Principali attacchi}
+I principali attacchi che colpiscono i CPS sono:
+\begin{itemize}
+    \item \textbf{False data injection}: appartengono ai \textit{deception attacks} e riguardano la stima dello stato. \'E uno degli attacchi più studiati. 
+    L'avversario conosce le infromazioni topologiche del sistema e manipola le misurazioni dei sensori per modificare la variabili di stato, baypassando gli schemi di rilevamento dei dati errati.
+    \item \textbf{Generic deception}: è un attacco all'integrità dei dati. L'avversario invia false informazioni a uno o più sensori o controllori in modo tale da ingannare un componente compromesso e fargli credere che il falso dato ricevuto sia valido.
+    \'E modellato come un segnale additivo arbitrario, mandato a sovrascrivere i dati originali.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Principali attacchi}
+\begin{itemize}
+    \item \textbf{Denial of Service (DOS)}: è il più noto tra gli attacchi alla disponibilità. Rende inaccessibili alcuni o tutti i componenti di un sistema di controllo e impedisce la trasmissione dei sensori e del controllo sulla rete.
+    \item \textbf{Replay}: fa parte degli attacchi all'integrità dei dati e solitamente viene combinato con un attacco fisico. L'avversario prima raccoglie sequenze di dati di misurazioni o controllo, poi riproduce i dati registrati mentre inietta un segnale esogeno nel sistema. Può non conoscere il modello del sistema per generare un output dannoso ma, conoscendolo, può raggiungere più facilmente il suo obiettivo, come per esempio danneggiare anche fisicamente l'impianto.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Principali attacchi}
+\begin{itemize}
+    \item \textbf{Covert misappropration}: l'avversario può ottenere il controllo dell'inpianto senza essere rilevato dal controllore. Questo attacco richiede alti livelli di conoscenza del sistema e l'abilità dell'avversario di leggere e sostituire i segnali di comunicazione  all'interno dell'anello di controllo.
+    \item \textbf{Zero dynamic}: l'avversario costruisce una \textit{open-loop policy} in modo tale che il segnale d'attacco non produca output. Gli attacchi sono quindi disaccoppiati dall'uscita dell'impianto e risultano furtivi rispetto ai rilevatori di anomalie arbitrarie. 
+\end{itemize}
+\end{frame}
+
+\subsection{Caso di studio}
+\begin{frame}{Caso di studio: dispositivi medici impiantabili}
+    
+\end{frame}
+
+\section{Metodi di difesa}
+\begin{frame}{Difesa}
+Per difendersi dagli attacchi....
+    
+\end{frame}
+
+
+\end{document}
