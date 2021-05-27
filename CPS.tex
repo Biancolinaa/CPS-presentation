@@ -1,4 +1,5 @@
 \documentclass{beamer}
+
 \usepackage[utf8]{inputenc}
 \usepackage{url}
 
@@ -12,7 +13,10 @@
 \title{Cyber Physical Systems}
 \subtitle{Panoramica sulla sicurezza}
 \author{Bianca Crippa}
-\date{2021}
+\institute{Università degli Studi di Bergamo
+    \\ \url{https://github.com/Biancolinaa/CPS-presentation.git}
+}
+\date{31.05.2021}
 
 \begin{document}
 
@@ -29,14 +33,15 @@
 
 \begin{frame}
     \frametitle{Cyber Physical Systems}
-    I Cyber Physical Systems (CPS) sono una delle innovazioni tecncologiche della quarta rivoluzione industriale.
+    I Cyber Physical Systems (\textbf{CPS}) sono una delle innovazioni tecncologiche della quarta rivoluzione industriale.
     
-    Sono sistemi il cui meccanismo è monitorato da algoritmi computer-based. 
-    Le componenti fisiche e software sono fortemente interconnesse in modo tale da poter operare su diverse scale temporali e spaziali e poter 
-    interagire tra loro in modi differenti in base ai cambiamenti del contesto. L'insieme di queste tecnologie è in grado di dar vita ad un ulteriore 
-    sistema basato sull'integrazione tra vari soggetti, posti anche a distanza tra loro.
-    
-    In essi si fondono conoscenze riguardanti la meccatronica, la cibernetica, il design e la scienza dei processi.
+    Sistemi il cui meccanismo è monitorato da algoritmi computer-based. 
+    Componenti fisiche e software fortemente interconnesse in modo per operare su diverse scale temporali e spaziali e  
+    interagire tra loro in modi differenti in base ai cambiamenti del contesto. 
+
+    L'insieme di queste tecnologie è in grado di dar vita ad un ulteriore sistema basato sull'\textbf{integrazione tra vari soggetti}, posti anche a 
+    distanza tra loro.    
+    Si fondono insieme conoscenze riguardanti la meccatronica, la cibernetica, il design e la scienza dei processi.
     
 \end{frame}
 
@@ -45,11 +50,11 @@
 
     Cinque livelli di funzionalità:
     \begin{itemize}
-        \item Smart Connection: utilizzo di sensori per la gestione dei dati;
-        \item Data-to-information-connection: aggregazione e conversione dei dati con aggiunta di eventuali informazioni;
-        \item Digital Twin: sintetizzazione del dominio reale nella realtà digitale;
-        \item Cogniction: considerazione di tutti gli scenari possibili. Indispensabile per un processo decisionale adeguato;
-        \item Configuration: proiettare la realtà virtuale su quella fisica tramite l'invio di feedback.
+        \item \textbf{Smart Connection}: utilizzo di sensori per la gestione dei dati;
+        \item \textbf{Data-to-information-connection}: aggregazione e conversione dei dati con aggiunta di eventuali informazioni;
+        \item \textbf{Digital Twin}: sintetizzazione del dominio reale nella realtà digitale;
+        \item \textbf{Cogniction}: considerazione di tutti gli scenari possibili. Indispensabile per un processo decisionale adeguato;
+        \item \textbf{Configuration}: proiettare la realtà virtuale su quella fisica tramite l'invio di feedback.
     \end{itemize}
     
 \end{frame}
@@ -57,13 +62,13 @@
 \begin{frame}{Tecnologie}
 Tre tipologie di tecnologie abilitanti:
 \begin{itemize}
-    \item Sensori integrati: ciascun sistema in pochi secondi riesce a capire la propria situazione operativa e inviare le informazioni relative al 
+    \item \textbf{Sensori integrati}: ciascun sistema in pochi secondi riesce a capire la propria situazione operativa e inviare le informazioni relative al 
     proprio stato e alla posizione;
-    \item Attuatori: consentono lo svolgimento delle varie azioni senza rischi per rendere ogni processo più performante;
-    \item Intelligenza decentrata: elabora gli scenari di scelta per fornire il più rapidamente possibile quello più consigliato.
+    \item \textbf{Attuatori}: consentono lo svolgimento delle varie azioni senza rischi per rendere ogni processo più performante;
+    \item \textbf{Intelligenza decentrata}: elabora gli scenari di scelta per fornire il più rapidamente possibile quello più consigliato.
 \end{itemize}
 
-L'insieme delle tecnologie costituisce il dominio digitale che permette alle informazioni di muoversi e garantisce una connessione veloce tra i 
+L'insieme delle tecnologie costituisce il \textbf{dominio digitale} che permette alle informazioni di muoversi e garantisce una connessione veloce tra i 
 componenti fisici.
 
 \end{frame}
@@ -96,7 +101,7 @@ Gli attacchi ai Cyber Physical Systems sono di tre tipi:
 I principali attacchi che colpiscono i CPS sono:
 \begin{itemize}
     \item \textbf{False data injection}: appartengono ai \textit{deception attacks} e riguardano la stima dello stato. \'E uno degli attacchi più studiati. 
-    L'avversario conosce le infromazioni topologiche del sistema e manipola le misurazioni dei sensori per modificare la variabili di stato, 
+    L'avversario conosce le informazioni topologiche del sistema e manipola le misurazioni dei sensori per modificare la variabili di stato, 
     baypassando gli schemi di rilevamento dei dati errati.
     \item \textbf{Generic deception}: è un attacco all'integrità dei dati. L'avversario invia false informazioni a uno o più sensori o controllori 
     in modo tale da ingannare un componente compromesso e fargli credere che il falso dato ricevuto sia valido.
@@ -117,7 +122,7 @@ I principali attacchi che colpiscono i CPS sono:
 
 \begin{frame}{Principali attacchi}
 \begin{itemize}
-    \item \textbf{Covert misappropration}: l'avversario può ottenere il controllo dell'inpianto senza essere rilevato dal controllore. 
+    \item \textbf{Covert misappropration}: l'avversario può ottenere il controllo dell'impianto senza essere rilevato dal controllore. 
     Questo attacco richiede alti livelli di conoscenza del sistema e l'abilità dell'avversario di leggere e sostituire i segnali di comunicazione  
     all'interno dell'anello di controllo.
     \item \textbf{Zero dynamic}: l'avversario costruisce una \textit{open-loop policy} in modo tale che il segnale d'attacco non produca output. 
@@ -170,14 +175,63 @@ I principali attacchi che colpiscono i CPS sono:
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Principali attacchi}
+    \begin{center}
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.5\linewidth]{img1.png}
+        \end{figure}
+    \end{center}
+\end{frame}
 
-
-
-%%%%% DA FARE %%%%%
 \subsection{Caso di studio}
 \begin{frame}{Caso di studio: dispositivi medici impiantabili}
+    I moderni IMD comunicano in modalità wireless con un dispositivo esterno detto \textit{programmer} e inviano dati per monitorare e ricevere la migliore 
+    terapia per il paziente. 
     
+    Utili per monitorare i parametri vitali del paziente, soprattutto se in condizioni critiche.
+
+    \begin{center}
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.5\linewidth]{img2.png}
+        \end{figure}
+    \end{center}
 \end{frame}
+
+\begin{frame}{Attacchi ai IMD}
+    I principali attacchi ai dispositivi medici impiantabili sono:
+    \begin{itemize}
+        \item \textbf{Information Harvesting}: se nessun meccanismo di autenticazione è applicato nell'IMD, l'avversario può ottenere informazioni 
+        riservate sulla salute del paziente oppure ascoltare le comunicazioni tra dispositivo e programmer per utilizzarle in ulteriori attacchi. 
+        \item \textbf{Tracking the patient}: la comunicazione wireless può essere facilmente rilevata, soprattutto se si è all'aperto. L'attaccante 
+        può tracciare il movimento del paziente comportando una grave violazione della privacy.        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Attacchi ai IMD}
+    \begin{itemize}
+        \item \textbf{Impersonation}: se il canale wireless non è sufficientemente protetto, l'avversario può origliare comunicazioni e registrare
+        la risposta dell'IMD. 
+        Utilizzati per raccogliere informazioni riguardo terapie e alimentazione del paziente e ritardare la risposta del medico curante ai bisogni del 
+        paziente.
+        \item \textbf{Relaying}: l'IMD viene ingannato facendogli presumere che il programmer sia vicino ad esso. L'attaccante utilizza due device 
+        chiamati \textit{ghost} e \textit{leech} che impersonificano rispettivamente l'IMD e il programmer. In questo modo continuano a 
+        trasmettere i messaggi tra IMD e programmer ingannando l'IMD  e facendogli credere di parlare con un programmer lecito.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Attacchi ai IMD}
+    \begin{itemize}
+        \item \textbf{Denial of Service}: si vuole manomettere la capacità dell'IMD di svolgere il proprio lavoro: 
+            \begin{itemize}
+                \item Richiedere attività che consumano l'energia del dispositivo - \textit{Power draining attack};
+                \item Interferire nella comunicazione con il servizio di manutenzione;
+                \item Far spegnere il dispositivo applicando un campo magnetico in prossimità del paziente.
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
 
 \section{Metodi di difesa}
 \begin{frame}{Difesa}
