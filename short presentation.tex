@@ -36,7 +36,7 @@
     I Cyber Physical Systems (\textbf{CPS}) sono una delle innovazioni tecncologiche della quarta rivoluzione industriale.
     
     Sistemi il cui meccanismo è monitorato da algoritmi computer-based. 
-    Componenti fisiche e software fortemente interconnesse in modo per operare su diverse scale temporali e spaziali e  
+    Componenti fisiche e software fortemente interconnesse per operare su diverse scale temporali e spaziali e  
     interagire tra loro in modi differenti in base ai cambiamenti del contesto. 
 
     L'insieme di queste tecnologie è in grado di dar vita ad un ulteriore sistema basato sull'\textbf{integrazione tra vari soggetti}, posti anche a 
@@ -77,21 +77,44 @@ I principali attacchi che colpiscono i CPS sono:
     \item \textbf{False data injection}: appartengono ai \textit{deception attacks} e riguardano la stima dello stato. \'E uno degli attacchi più studiati. 
     L'avversario conosce le informazioni topologiche del sistema e manipola le misurazioni dei sensori per modificare la variabili di stato, 
     baypassando gli schemi di rilevamento dei dati errati.
-    \item \textbf{Generic deception}: è un attacco all'integrità dei dati. L'avversario invia false informazioni a uno o più sensori o controllori 
-    in modo tale da ingannare un componente compromesso e fargli credere che il falso dato ricevuto sia valido.
-    \'E modellato come un segnale additivo arbitrario, mandato a sovrascrivere i dati originali.
+    \item \textbf{Load redistribution}: è un tipo speciale di attacchi \textit{false data injection}. Consiste nell'aumentare o nel ridurre 
+    il carico su alcuni bus, mantenendo inalterato il carico totale per nascondere l'attacco ai rilevatori. L'attaccante deve conoscere le informazioni
+    topologiche della rete.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Principali attacchi}
 \begin{itemize}
-    \item \textbf{Denial of Service (DOS)}: è il più noto tra gli attacchi alla disponibilità. Rende inaccessibili alcuni o tutti i componenti di un 
-    sistema di controllo e impedisce la trasmissione dei sensori e del controllo sulla rete.
+    \item \textbf{Generic deception}: è un attacco all'integrità dei dati. L'avversario invia false informazioni a uno o più sensori o controllori 
+    in modo tale da ingannare un componente compromesso e fargli credere che il falso dato ricevuto sia valido.
+    \'E modellato come un segnale additivo arbitrario, mandato a sovrascrivere i dati originali.
     \item \textbf{Replay}: fa parte degli attacchi all'integrità dei dati e solitamente viene combinato con un attacco fisico. L'avversario prima 
     raccoglie sequenze di dati di misurazioni o controllo, poi riproduce i dati registrati mentre inietta un segnale esogeno nel sistema. 
     Può non conoscere il modello del sistema per generare un output dannoso ma, conoscendolo, può raggiungere più facilmente il suo obiettivo, 
     come per esempio danneggiare anche fisicamente l'impianto.
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Principali attacchi}
+    \begin{itemize}
+        \item \textbf{Denial of Service (DOS)}: è il più noto tra gli attacchi alla disponibilità. Rende inaccessibili alcuni o tutti i componenti di un 
+        sistema di controllo e impedisce la trasmissione dei sensori e del controllo sulla rete.
+        \item \textbf{Load altering}: possono far cadere la rete o causare danni significativi alla trasmissione della potenza e alle apparecchiature.
+        Consiste nel tentativo di controllare e cambiare (generalmente aumentando) alcuni carichi per danneggiare l'impianto con overflow di circuito
+        o disturbando l'equilibrio tra fornitura di energia e domanda.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Principali attacchi}
+    \begin{itemize}
+        \item \textbf{Covert misappropration}: l'avversario può ottenere il controllo dell'impianto senza essere rilevato dal controllore. 
+        Questo attacco richiede alti livelli di conoscenza del sistema e l'abilità dell'avversario di leggere e sostituire i segnali di comunicazione  
+        all'interno dell'anello di controllo.
+        \item \textbf{Data framing}: fa parte dei \textit{deception attacks} e riguarda lo stato del sistema di alimentazione e sfrutta i meccanismi 
+        per il rilevamento e la rimozione dei dati errati. Intenzionalmente attiva il meccanismo di rilevamento errori e inquadra come fonte di errore dei
+        misuratori che in realtà sono funzionanti, in modo tale che i dati da loro forniti vengano rimossi. In questo modo, lo stato risultante stimato
+        può contenere un errore arbitrariamente grande. 
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Principali attacchi}
